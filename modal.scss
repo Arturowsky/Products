@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    // background: linear-gradient(to right, #263a44, #3a7bd5);
+    background: #2d3436;
+
+}
+h1 {
+    font-size: 2rem;
+    padding-top: 2em;
+    color: #ddd;
+    font-family: 'Source Code Pro', monospace;
+}
+label {
+    color: #ddd;
+}
+.submitBtn {
+    color: #fff;
+    font-size: 1.2rem;
+    background: darken(#55efc4, 10%);
+    color: rgb(122, 113, 113);;
+    &:hover {
+        background: #0984e3;
+    }
+    &:active {
+        color: #fff;
+    }
+}
+.halfSize {
+    width: 25vw;
+    left: 0 auto;
+}
+.fullSize {
+    width: 100%;
+}
+
+.newEl,
+.newEl2 {
+    font-size: 1.4rem;
+    text-align: center;
+    font-weight: bolder;
+    padding-top: 25px;
+}
+.newEl {
+    color: #57606f;
+}
+.newEl2 {
+    color: #fff;
+}
+#output {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.outputClass {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 50px;
+    place-items: center;
+    width: 100%;
+    background: #ced6e0;
+    margin-bottom: 10px;
+    border-radius: 5px 5px 5px 5px;
+    &:hover {
+        background: #dfe4ea;
+        box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.25);
+
+        .remove {
+            background: #ff6b81;
+            width: 50px;
+            padding-left: 15px;
+            border-radius: 0px 5px 5px 0px;
+        }
+        p {
+            text-decoration: underline;
+        }
+    }
+    div {
+        place-items: center;
+    }
+    .remove {
+        background: #ced6e0;
+        width: 50px;
+        padding-left: 15px;
+        border-radius: 5px 5px 5px 5px;
+        &:hover {
+            cursor: pointer;
+            background: #ff4757;
+        }
+    }
+}
+@media (max-width: 720px) {
+    .outputClass {
+        grid-template-columns: 1fr;
+        justify-items: start;
+    }
+    .remove {
+        padding-left: 0px;
+        border-radius: none;
+    }
+    .newEl {
+        font-size: 1.4rem;
+        text-align: left;
+        font-weight: bolder;
+        padding-left: 25px;
+    }  
+    p {
+        padding: 0px 0px;
+    }
+}
